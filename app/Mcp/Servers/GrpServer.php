@@ -7,6 +7,9 @@ use Laravel\Mcp\Server\Attributes\Instructions;
 use Laravel\Mcp\Server\Attributes\Name;
 use Laravel\Mcp\Server\Attributes\Version;
 
+use App\Mcp\Tools\CreateTaskTool;
+use App\Mcp\Tools\UpdateTaskStatusTool;
+
 #[Name('Grp Server')]
 #[Version('1.0.0')]
 #[Instructions('Este servidor gestiona recursos y proyectos del GRP, incluyendo tareas, usuarios y reportes')]
@@ -19,6 +22,7 @@ class GrpServer extends Server
      */
     protected array $tools = [
         CreateTaskTool::class,
+        UpdateTaskStatusTool::class,
     ];
 
     /**
